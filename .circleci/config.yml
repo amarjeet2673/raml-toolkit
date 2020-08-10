@@ -3,9 +3,7 @@ commands:
   build:
     steps:
       - checkout
-      - node/with-cache:
-          steps:
-            - run: npm ci
+      - run: npm ci
       - run: npm run compile
   test:
     steps:
